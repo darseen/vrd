@@ -20,7 +20,7 @@ Output:
 
 ```
 Checking records for: www.example.com
-[SUCCESS] CNAME Record(s) : www.example.com
+[SUCCESS] CNAME Record : www.example.com
 [SUCCESS] TXT Record: railway-verify=<TXT value> (at _railway-verify.www.example.com)
 
 Done!
