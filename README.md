@@ -7,7 +7,7 @@ A lightweight command-line tool to verify a given domain.
 You can install the package globally using npm:
 
 ```bash
-npm install -g vrd
+npm i -g @darseen/vrd
 ```
 
 ## Usage
