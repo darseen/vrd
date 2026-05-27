@@ -1,0 +1,49 @@
+{
+  "name": "vrd",
+  "version": "1.0.0",
+  "description": "CLI tool to verify Railway custom domain setup",
+  "main": "index.js",
+  "homepage": "https://github.com/darseen/vrd#readme",
+  "bugs": {
+    "url": "https://github.com/darseen/vrd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darseen/vrd.git"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "prebuild": "pnpm lint && rimraf ./dist",
+    "build": "tsup",
+    "release": "pnpm build && pnpm publish --provenance --no-git-checks --access public",
+    "dev": "pnpm build && pnpm remove -g vrd; pnpm add -g ."
+  },
+  "bin": {
+    "vrd": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "cli",
+    "dns",
+    "railway",
+    "cname"
+  ],
+  "author": "darseen",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.4.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "rimraf": "^6.1.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
