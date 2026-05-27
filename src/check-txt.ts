@@ -7,6 +7,10 @@ export default async function checkTxt(domain: string) {
   try {
     const txtRecords = await resolveTxt(railwayDomain);
     const formattedTxt = txtRecords.map((chunk) => chunk.join("")).join(", ");
+    const txtValue = formattedTxt.split("=")[1];
+    if (txtValue?.length !== 64 || txtValue.includes("."))
+      throw new Error(`TXT Record is malformed: ${formattedTxt}`);
+
     messages.push(
       `[SUCCESS] TXT Record: ${formattedTxt} (at ${railwayDomain})`,
     );
