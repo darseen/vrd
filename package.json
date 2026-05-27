@@ -1,5 +1,5 @@
 {
-  "name": "vrd",
+  "name": "@darseen/vrd",
   "version": "1.0.0",
   "description": "CLI tool to verify Railway custom domain setup",
   "main": "index.js",

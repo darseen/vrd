@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish-sdk:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
