@@ -25,7 +25,7 @@ export default async function checkTxt(domain: string) {
         `[INFO] You need to add a TXT record at _railway-verify.${domain}.`,
       );
       messages.push(
-        "[INFO] If you are using the API to add your custom domain, you can find it in verificationStatus under status",
+        "[INFO] If you are using the API to add your custom domain, you can find it in verificationToken under status",
       );
     } else if (error instanceof Error) {
       messages.push(`[Error] TXT Error: ${error.message}`);
